@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewViewController" customModule="FirebaseCloudMessagingTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OLU-Zq-Lfv">
+                                <rect key="frame" x="30" y="142" width="315" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="M4f-QP-xzS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3Re-O0-4Zb"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSp-4k-lXJ">
+                                <rect key="frame" x="30" y="192" width="315" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cIL-TF-FcN"/>
+                                </constraints>
+                                <state key="normal" title="Login Anonymously"/>
+                                <connections>
+                                    <action selector="loginDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSq-nE-xzr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FirebaseCloudMessaging" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iu-p8-TUQ">
+                                <rect key="frame" x="30" y="60" width="315" height="32"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1174578741" green="0.53460371490000003" blue="0.89848452810000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OLU-Zq-Lfv" firstAttribute="top" secondItem="1iu-p8-TUQ" secondAttribute="bottom" constant="50" id="OfC-ec-0Qi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OLU-Zq-Lfv" secondAttribute="trailing" constant="30" id="UdR-4M-G9c"/>
+                            <constraint firstItem="LSp-4k-lXJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="UqA-V7-csM"/>
+                            <constraint firstItem="1iu-p8-TUQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ba2-mw-KGy"/>
+                            <constraint firstItem="OLU-Zq-Lfv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="i8i-jh-4dm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1iu-p8-TUQ" secondAttribute="trailing" constant="30" id="ng0-nb-NCX"/>
+                            <constraint firstItem="1iu-p8-TUQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="pXA-9E-jPc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LSp-4k-lXJ" secondAttribute="trailing" constant="30" id="qVa-JU-Gt3"/>
+                            <constraint firstItem="LSp-4k-lXJ" firstAttribute="top" secondItem="OLU-Zq-Lfv" secondAttribute="bottom" constant="10" id="reJ-UV-0TW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="OLU-Zq-Lfv" id="m5H-E4-alc"/>
+                        <segue destination="Ii8-c8-IuI" kind="presentation" identifier="LoginToChat" id="WjT-XG-dvA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="150" y="134"/>
+        </scene>
+        <!--Channel-->
+        <scene sceneID="N61-dn-zwf">
+            <objects>
+                <tableViewController id="3fV-qa-8VJ" customClass="ChannelListViewController" customModule="FirebaseCloudMessagingTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uWp-Hc-i4T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Wy8-3q-Uro">
+                            <rect key="frame" x="0.0" y="116" width="375" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewChannel" id="eEQ-FX-Lwz" customClass="CreateChannelCell" customModule="FirebaseCloudMessagingTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eEQ-FX-Lwz" id="Teh-2D-Jln">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PQd-EN-ykn">
+                                            <rect key="frame" x="10" y="5" width="299" height="33"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="3fV-qa-8VJ" id="n4D-Vi-E52"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNr-WO-Hla">
+                                            <rect key="frame" x="319" y="5" width="46" height="33.5"/>
+                                            <state key="normal" title="Create"/>
+                                            <connections>
+                                                <action selector="createChannel:" destination="3fV-qa-8VJ" eventType="touchUpInside" id="adR-kQ-MRc"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="GNr-WO-Hla" firstAttribute="top" secondItem="Teh-2D-Jln" secondAttribute="top" constant="5" id="1GT-DW-sqU"/>
+                                        <constraint firstItem="PQd-EN-ykn" firstAttribute="top" secondItem="Teh-2D-Jln" secondAttribute="top" constant="5" id="Ecv-jH-Vrk"/>
+                                        <constraint firstAttribute="trailing" secondItem="GNr-WO-Hla" secondAttribute="trailing" constant="10" id="PZH-7N-aE4"/>
+                                        <constraint firstItem="GNr-WO-Hla" firstAttribute="leading" secondItem="PQd-EN-ykn" secondAttribute="trailing" constant="10" id="RUj-j0-bq6"/>
+                                        <constraint firstAttribute="bottom" secondItem="GNr-WO-Hla" secondAttribute="bottom" constant="5" id="SfE-3z-UZU"/>
+                                        <constraint firstItem="PQd-EN-ykn" firstAttribute="leading" secondItem="Teh-2D-Jln" secondAttribute="leading" constant="10" id="qOi-ry-tBA"/>
+                                        <constraint firstAttribute="bottom" secondItem="PQd-EN-ykn" secondAttribute="bottom" constant="5" id="zS2-WZ-eu4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="createChannelButton" destination="GNr-WO-Hla" id="eTF-zk-Ke3"/>
+                                    <outlet property="newChannelNameField" destination="PQd-EN-ykn" id="FTa-1B-1jU"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExistingChannel" id="aYU-WS-gbs" customClass="CreateChannelCell" customModule="FirebaseCloudMessagingTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYU-WS-gbs" id="1ji-gX-FZx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3fV-qa-8VJ" id="Fhd-xz-4gl"/>
+                            <outlet property="delegate" destination="3fV-qa-8VJ" id="WrI-Q3-wfy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Channel" id="O7Q-kw-5vR"/>
+                    <connections>
+                        <segue destination="mF8-7s-Odx" kind="show" identifier="ShowChannel" id="8jL-Kl-wFG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Df9-hN-mnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="134"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="7cr-5i-Dto">
+            <objects>
+                <viewController id="mF8-7s-Odx" customClass="ChatViewController" customModule="FirebaseCloudMessagingTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BF5-JG-ghG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hZO-Iw-6ba"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8V-hH-Auu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2286" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VYh-T5-ve0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ii8-c8-IuI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ACa-H2-Yo2">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3fV-qa-8VJ" kind="relationship" relationship="rootViewController" id="4qU-FN-eFu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdk-4L-Hrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="134"/>
+        </scene>
+    </scenes>
+</document>
